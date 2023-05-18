@@ -1,0 +1,31 @@
+.gallery-section {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .section-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .image:hover {
+    transform: scale(1.1);
+  }
