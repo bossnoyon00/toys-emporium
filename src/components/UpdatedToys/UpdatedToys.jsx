@@ -97,7 +97,13 @@ const UpdatedToys = () => {
                             type="name"
                         />
 
-                       
+                        <input
+                            className="text-input"
+                            {...register("description")}
+                            placeholder="description"
+                        />
+                      
+
                         <input className="submit-btn" value="Update Toys" type="submit" />
                     </form>
                 </div>
