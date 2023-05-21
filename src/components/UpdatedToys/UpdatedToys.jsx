@@ -102,7 +102,16 @@ const UpdatedToys = () => {
                             {...register("description")}
                             placeholder="description"
                         />
-                      
+                        <input
+                            className="text-input"
+                            {...register("quantity")}
+                            placeholder="Available Quantity"
+                        />
+                        <input
+                            className="text-input"
+                            {...register("ratings")}
+                            placeholder="Ratings"
+                        />
 
                         <input className="submit-btn" value="Update Toys" type="submit" />
                     </form>
