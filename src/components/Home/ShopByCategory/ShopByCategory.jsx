@@ -62,13 +62,13 @@ const ShopByCategory = () => {
 
                     </TabPanel>
 
-                    <TabPanel>
+                    <TabPanel className='grid md:grid-cols-2 gap-5'>
                         {tarzenCar.slice(0, 2).map((category, index) => (
                             <TarzenCar category={category} key={index}></TarzenCar>
                         ))}
                     </TabPanel>
 
-                    <TabPanel>
+                    <TabPanel className='grid md:grid-cols-2 gap-5'>
                         {fantasyCar.slice(0, 2).map((category, index) => (
                             <FantasyCar category={category} key={index}></FantasyCar>
                         ))}

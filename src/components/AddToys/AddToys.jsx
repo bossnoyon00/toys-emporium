@@ -3,6 +3,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 import { useForm } from 'react-hook-form';
 import './AddToys.css'
 import useTitle from '../../hooks/useTitle';
+import Swal from 'sweetalert2';
 
 const AddToys = () => {
     useTitle('Add Toys')
@@ -29,6 +30,14 @@ const AddToys = () => {
             .then((res) => res.json())
             .then((result) => {
                 console.log(result);
+                if (result.insertedId) {
+                    Swal.fire({
+                        title: 'success!',
+                        text: 'Toy Added successfully',
+                        icon: 'success',
+                        confirmButtonTxt: 'Okay'
+                    })
+                }
             });
         console.log(data);
     };
