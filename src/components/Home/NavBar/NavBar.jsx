@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import './NavBar.css'
 import { Link, NavLink } from 'react-router-dom';
 import {
     Bars3BottomRightIcon,
@@ -9,7 +8,6 @@ import { AuthContext } from '../../../providers/AuthProvider';
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
-    console.log(user);
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const handleLogOut = () => {
@@ -20,14 +18,14 @@ const NavBar = () => {
             })
     }
     return (
-        <div className='bg-gray-700 rounded px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
+        <div className='bg-teal-300 font-bold   rounded px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
             <div className=''>
-                <div className='relative flex text-stone-100 items-center justify-between'>
+                <div className='relative flex  items-center justify-between'>
                     {/* Logo Section */}
                     <Link to='/' className='inline-flex items-center'>
-
+                        <img className='w-10 mr-2' src="https://i.ibb.co/R4gSJY5/toy.png" alt="" />
                         <span className='ml-2 text-lime-600 text-3xl font-bold tracking-wide '>
-                            Toys Emporium
+                            Toy Cars Emporium
                         </span>
                     </Link>
 
@@ -36,7 +34,7 @@ const NavBar = () => {
                         <li>
                             <NavLink
                                 to='/'
-                                className={({ isActive }) => (isActive ? 'active' : 'default')}
+                                className={({ isActive }) => (isActive ? 'p-5 text-blue-500 rounded' : 'default')}
                             >
                                 Home
                             </NavLink>
@@ -46,24 +44,24 @@ const NavBar = () => {
 
                         <li>
                             <NavLink
-                                to='/blog'
-                                className={({ isActive }) => (isActive ? 'active' : 'default')}
+                                to='/alltoys'
+                                className={({ isActive }) => (isActive ? 'p-5 text-blue-500 rounded' : 'default')}
                             >
                                 All Toys
                             </NavLink>
                         </li>
                         <li>
                             <NavLink
-                                to='/blog'
-                                className={({ isActive }) => (isActive ? 'active' : 'default')}
+                                to='/myToys'
+                                className={({ isActive }) => (isActive ? 'p-5 text-blue-500 rounded' : 'default')}
                             >
                                 My Toys
                             </NavLink>
                         </li>
                         <li>
                             <NavLink
-                                to='/blog'
-                                className={({ isActive }) => (isActive ? 'active' : 'default')}
+                                to='/addToys'
+                                className={({ isActive }) => (isActive ? 'p-5 text-blue-500 rounded' : 'default')}
                             >
                                 Add a Toys
                             </NavLink>
@@ -71,7 +69,7 @@ const NavBar = () => {
                         <li>
                             <NavLink
                                 to='/blog'
-                                className={({ isActive }) => (isActive ? 'active' : 'default')}
+                                className={({ isActive }) => (isActive ? 'p-5 text-blue-500 rounded' : 'default')}
                             >
                                 Blog
                             </NavLink>
@@ -98,7 +96,7 @@ const NavBar = () => {
                                 :
                                 <NavLink
                                     to='/login'
-                                    className={({ isActive }) => (isActive ? 'active' : 'default')}
+                                    className={({ isActive }) => (isActive ? 'p-5 text-blue-500 rounded' : 'default')}
                                 >
                                     Login
                                 </NavLink>

@@ -11,6 +11,12 @@ import Home from './components/Home/Home/Home.jsx';
 import AuthProvider from './providers/AuthProvider.jsx';
 import Login from './components/Login/Login.jsx';
 import Register from './components/Register/Register.jsx';
+import AllToys from './components/AllToys/AllToys.jsx';
+import PrivateRoute from './routes/PrivateRoute.jsx';
+import AddToys from './components/AddToys/AddToys.jsx';
+import SingleToyDetails from './components/SingleToyDetails/SingleToyDetails.jsx';
+import MyToys from './components/MyToys/MyToys.jsx';
+import UpdatedToys from './components/UpdatedToys/UpdatedToys.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +26,28 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path: '/alltoys',
+        element: <AllToys></AllToys>
+      },
+      {
+        path: '/singleToys/:id',
+        element: <PrivateRoute><SingleToyDetails></SingleToyDetails></PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/singleToy/${params.id}`)
+      },
+      {
+        path: '/addToys',
+        element: <PrivateRoute><AddToys></AddToys></PrivateRoute>
+      },
+      {
+        path: '/updatedToys/:id',
+        element: <PrivateRoute><UpdatedToys></UpdatedToys></PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:5000/post-toys/${params.id}`)
+      },
+      {
+        path: '/myToys',
+        element: <PrivateRoute><MyToys></MyToys></PrivateRoute>
       },
       {
         path: '/login',
@@ -35,9 +63,11 @@ const router = createBrowserRouter([
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <AuthProvider>
-      <RouterProvider router={router}></RouterProvider>
-    </AuthProvider>
-  </React.StrictMode>,
+  <div className='max-w-7xl mx-auto'>
+    <React.StrictMode>
+      <AuthProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </AuthProvider>
+    </React.StrictMode>,
+  </div>
 )

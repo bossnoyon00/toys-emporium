@@ -2,12 +2,14 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../providers/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
     const { signIn, googleSignIn, githubSignIn, } = useContext(AuthContext);
     const navigate = useNavigate();
     const [error, setError] = useState('')
     const location = useLocation();
+    useTitle('Login')
     const handleSignIn = (event) => {
         event.preventDefault()
         const form = event.target;
