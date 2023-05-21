@@ -14,8 +14,13 @@ const UseAos = () => {
                     <div className=' className="container mx-auto text-center"
         data-aos="zoom-in" 
         data-aos-duration="1000"'>
-                       
-
+                        <div>
+                            <h2 className="text-3xl font-bold mb-4">Welcome to our website</h2>
+                            <p className="text-gray-600">
+                                We provide innovative solutions to help businesses grow and succeed in the digital era.
+                            </p>
+                        </div>
+                      
                     </div>
                 </div>
             </div>
