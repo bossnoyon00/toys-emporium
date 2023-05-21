@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import {
+    Bars3BottomLeftIcon,
     Bars3BottomRightIcon,
     XMarkIcon,
 } from '@heroicons/react/24/solid'
@@ -92,7 +93,7 @@ const NavBar = () => {
                         </li> */}
                         <li>
                             {user ?
-                                <button onClick={handleLogOut} className='btn btn-primary'>Logout</button>
+                                <button onClick={handleLogOut} className='btn btn-danger'>Logout</button>
                                 :
                                 <NavLink
                                     to='/login'
@@ -127,7 +128,7 @@ const NavBar = () => {
                                     <div className='flex items-center justify-between mb-4'>
                                         <div>
                                             <Link to='/' className='inline-flex items-center'>
-                                                <BoltIcon className='h-6 w-6 text-blue-500' />
+                                                <Bars3BottomLeftIcon className='h-6 w-6 text-blue-500' />
                                                 <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
                                                     Chef House
                                                 </span>

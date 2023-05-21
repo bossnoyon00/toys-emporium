@@ -63,7 +63,7 @@ const UpdatedToys = () => {
                             <label className="label">
                                 <span className="label-text">Sub Category</span>
                             </label>
-                            <select className="text-input  input input-bordered" {...register("subCategory")}>
+                            <select  className="text-input  input input-bordered" {...register("subCategory")}>
                                 <option value="Tarzen Car">Tarzen Car</option>
                                 <option value="Electric Car">Electric Car</option>
                                 <option value="Remote Car">Remote Car</option>
@@ -75,12 +75,16 @@ const UpdatedToys = () => {
                             {...register("toyName")}
                             placeholder="Toy name"
                             type="name"
+                            required
+                            defaultValue={toys.toyName}
                         />
                         <input
                             className="text-input"
                             {...register("price")}
                             placeholder="Toy Price"
                             type="number"
+                            defaultValue={toys.price}
+                            required
                         />
                         <input
                             className="text-input"
@@ -88,6 +92,7 @@ const UpdatedToys = () => {
                             {...register("postedBy")}
                             placeholder="Your email"
                             type="email"
+                            required
                         />
                         <input
                             className="text-input"
@@ -95,34 +100,34 @@ const UpdatedToys = () => {
                             {...register("userName")}
                             placeholder="Your name"
                             type="name"
+                            required
                         />
 
                         <input
                             className="text-input"
                             {...register("description")}
                             placeholder="description"
+                            required
+                            defaultValue={toys.description}
                         />
                         <input
                             className="text-input"
                             {...register("quantity")}
                             placeholder="Available Quantity"
+                            defaultValue={toys.quantity}
+                            required
                         />
                         <input
                             className="text-input"
                             {...register("ratings")}
                             placeholder="Ratings"
+                            required
+                            defaultValue={toys.ratings}
                         />
 
                         <input className="submit-btn" value="Update Toys" type="submit" />
                     </form>
                 </div>
-                {/* <div className="col-md-4">
-                <img
-                    className="w-100"
-                    src="https://i.ibb.co/rthZ75K/pngtree-job-vacancy-with-join-our-team-recruitment-vector-design-png-image-6419066-removebg-preview.png"
-                    alt=""
-                />
-            </div> */}
             </div>
         </div>
     );

@@ -17,6 +17,7 @@ import AddToys from './components/AddToys/AddToys.jsx';
 import SingleToyDetails from './components/SingleToyDetails/SingleToyDetails.jsx';
 import MyToys from './components/MyToys/MyToys.jsx';
 import UpdatedToys from './components/UpdatedToys/UpdatedToys.jsx';
+import Blog from './components/Blog/Blog.jsx';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: '/addToys',
         element: <PrivateRoute><AddToys></AddToys></PrivateRoute>
+      },
+      {
+        path: '/blog',
+        element: <Blog></Blog>
       },
       {
         path: '/updatedToys/:id',

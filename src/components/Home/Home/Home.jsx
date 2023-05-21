@@ -4,6 +4,7 @@ import GallerySection from '../../../GallerySection';
 import ShopByCategory from '../ShopByCategory/ShopByCategory';
 import UseAos from '../UseAos/UseAos';
 import useTitle from '../../../hooks/useTitle';
+import FeedBack from '../FeedBack/FeedBack';
 
 const Home = () => {
     useTitle('Home');
@@ -43,6 +44,7 @@ const Home = () => {
             <GallerySection></GallerySection>
             <ShopByCategory></ShopByCategory>
             <UseAos></UseAos>
+            <FeedBack></FeedBack>
         </div>
     );
 };

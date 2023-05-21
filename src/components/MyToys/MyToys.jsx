@@ -15,12 +15,7 @@ const MyToys = () => {
     const { user } = useContext(AuthContext)
     const [myToys, setMyToys] = useState([]);
     const [sort, setSort] = useState("");
-    // const [loadedUser, setUser] = useState(myToys)
-    // if (!setSort) {
-    //     return <div className='text-center'>
-    //         <progress className="progress w-56"></progress>
-    //     </div>
-    // }
+
     const handleDelete = (_id) => {
 
         Swal.fire({
@@ -33,7 +28,7 @@ const MyToys = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://toy-emporium-server.vercel.app/post-toys${_id}`, {
+                fetch(`https://toy-emporium-server.vercel.app/post-toys/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -42,15 +37,13 @@ const MyToys = () => {
                         if (data.deletedCount > 0) {
                             Swal.fire(
                                 'Deleted!',
-                                'Your Coffee has been deleted.',
+                                'Your Toys has been deleted.',
                                 'success'
                             );
                             const remaining = myToys.filter(users => users._id !== _id);
                             setMyToys(remaining);
 
                         }
-
-
 
                     })
             }
