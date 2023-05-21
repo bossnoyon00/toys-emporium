@@ -32,7 +32,7 @@ const ShopByCategory = () => {
 
     return (
         <div>
-            <h2>Shop by Category</h2>
+            <h1 className='mb-4 text-center font-extrabold text-4xl p-3 text-gray-500 border border-slate-900 border-spacing-2 bg-emerald-200 rounded-2xl'>Shop By Category</h1>
             <Tabs>
                 <TabList className='grid md:grid-cols-3 gap-10' >
                     {
