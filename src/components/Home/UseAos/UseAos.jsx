@@ -20,7 +20,15 @@ const UseAos = () => {
                                 We provide innovative solutions to help businesses grow and succeed in the digital era.
                             </p>
                         </div>
-                      
+                        <div className=''>
+                            <img
+                                src="https://i.ibb.co/MNPQ8KD/R-5.png"
+                                alt="Illustration"
+                                className="w-full rounded-lg"
+                                data-aos="zoom-in" // Apply zoom-in animation on scroll
+                            />
+                        </div>
+
                     </div>
                 </div>
             </div>
