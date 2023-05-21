@@ -15,7 +15,7 @@ const MyToys = () => {
     const { user } = useContext(AuthContext)
     const [myToys, setMyToys] = useState([]);
     const [sort, setSort] = useState("");
-   
+
     const handleDelete = (_id) => {
 
         Swal.fire({
@@ -80,6 +80,7 @@ const MyToys = () => {
                                 <th>Seller Name</th>
                                 <th>Seller email</th>
                                 <th>Price</th>
+                                <th>Description</th>
                                 <th>Rating</th>
                                 <th>Quantity</th>
                                 <th>Update</th>

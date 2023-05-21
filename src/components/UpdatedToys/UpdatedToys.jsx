@@ -3,8 +3,10 @@ import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
 
 const UpdatedToys = () => {
+    useTitle('Update Toy')
     const { user, loading } = useContext(AuthContext);
 
     if (loading) {
@@ -43,15 +45,15 @@ const UpdatedToys = () => {
         console.log(data);
     };
     return (
-        <div className="add-job-container mt-52">
-            <div className="add-job row">
-                <div className="col-md-8">
-                    <form className='grid md:grid-cols-3' onSubmit={handleSubmit(onSubmit)}>
+        <div className="border p-7 border-y-gray-400">
+            <div className="">
+                <div className="">
+                    <form className='space-y-5' onSubmit={handleSubmit(onSubmit)}>
                         {errors.exampleRequired && <span>This field is required</span>}
 
 
                         <input
-                            className="text-input"
+                            className=" text-input border border-orange-300 rounded  p-5 w-full"
                             {...register("image")}
                             placeholder="image link"
                             type="url"
@@ -63,7 +65,7 @@ const UpdatedToys = () => {
                             <label className="label">
                                 <span className="label-text">Sub Category</span>
                             </label>
-                            <select  className="text-input  input input-bordered" {...register("subCategory")}>
+                            <select className="text-input border border-orange-300 rounded  p-5 w-full" {...register("subCategory")}>
                                 <option value="Tarzen Car">Tarzen Car</option>
                                 <option value="Electric Car">Electric Car</option>
                                 <option value="Remote Car">Remote Car</option>
@@ -71,7 +73,7 @@ const UpdatedToys = () => {
                         </div>
 
                         <input
-                            className="text-input"
+                            className="text-input border border-orange-300 rounded  p-5 w-full"
                             {...register("toyName")}
                             placeholder="Toy name"
                             type="name"
@@ -79,7 +81,7 @@ const UpdatedToys = () => {
                             defaultValue={toys.toyName}
                         />
                         <input
-                            className="text-input"
+                            className="text-input border border-orange-300 rounded  p-5 w-full"
                             {...register("price")}
                             placeholder="Toy Price"
                             type="number"
@@ -87,7 +89,7 @@ const UpdatedToys = () => {
                             required
                         />
                         <input
-                            className="text-input"
+                            className="text-input border border-orange-300 rounded  p-5 w-full"
                             value={user?.email}
                             {...register("postedBy")}
                             placeholder="Your email"
@@ -95,7 +97,7 @@ const UpdatedToys = () => {
                             required
                         />
                         <input
-                            className="text-input"
+                            className="text-input border border-orange-300 rounded  p-5 w-full"
                             value={user?.displayName}
                             {...register("userName")}
                             placeholder="Your name"
@@ -104,28 +106,28 @@ const UpdatedToys = () => {
                         />
 
                         <input
-                            className="text-input"
+                            className="text-input border border-orange-300 rounded  p-5 w-full"
                             {...register("description")}
                             placeholder="description"
                             required
                             defaultValue={toys.description}
                         />
                         <input
-                            className="text-input"
+                            className="text-input border border-orange-300 rounded  p-5 w-full"
                             {...register("quantity")}
                             placeholder="Available Quantity"
                             defaultValue={toys.quantity}
                             required
                         />
                         <input
-                            className="text-input"
+                            className="text-input border border-orange-300 rounded  p-5 w-full"
                             {...register("ratings")}
                             placeholder="Ratings"
                             required
                             defaultValue={toys.ratings}
                         />
 
-                        <input className="submit-btn" value="Update Toys" type="submit" />
+                        <input className="btn btn-outline w-full btn-accent" value="Update Toys" type="submit" />
                     </form>
                 </div>
             </div>

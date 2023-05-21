@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const SingleToyDetails = () => {
+    useTitle('Toy details')
     const { loading } = useContext((AuthContext))
     if (loading) {
         return <div className='text-center'>

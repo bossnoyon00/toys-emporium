@@ -34,6 +34,7 @@ const ShowMyToys = ({ myToy, index, handleDelete }) => {
             </td>
             <td>{postedBy}</td>
             <td>{price}</td>
+            <td>{description}</td>
             <td>{ratings}</td>
             <td>{quantity}</td>
             <th>

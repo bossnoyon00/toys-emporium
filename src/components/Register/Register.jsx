@@ -50,15 +50,15 @@ const Register = () => {
             })
     }
     return (
-        <div>
-            <div className="hero min-h-screen bg-base-200">
+        <div className='border border-purple-500'>
+            <div className="hero min-h-screen p-6  bg-cyan-500">
                 <div className="hero-content flex-col">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Register now!</h1>
+                    <div className="text-center text-orange-700 lg:text-left">
+                        <h1 className="text-5xl font-bold">Register Toys now!</h1>
 
                     </div>
                     <form onSubmit={handleRegister} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <div className="card-body">
+                        <div className="card-body bg-amber-200 rounded">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>

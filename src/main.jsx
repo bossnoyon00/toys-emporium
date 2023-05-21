@@ -18,11 +18,13 @@ import SingleToyDetails from './components/SingleToyDetails/SingleToyDetails.jsx
 import MyToys from './components/MyToys/MyToys.jsx';
 import UpdatedToys from './components/UpdatedToys/UpdatedToys.jsx';
 import Blog from './components/Blog/Blog.jsx';
+import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',

@@ -1,10 +1,14 @@
-import React from 'react';
+
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const UseAos = () => {
-
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
     return (
-        <section className="bg-gray-500 rounded hover:m-24 duration-1000 my-24 py-8 flip-up">
+        <section className="bg-gray-500  rounded my-24 py-8" data-aos="zoom-in-right">
             <div className="container mx-auto">
 
                 <div className='grid md:grid-cols-2 text-center'>
@@ -20,7 +24,10 @@ const UseAos = () => {
                             <Link to='addToys'> <button className='btn btn-warning font-extrabold'>See All Toys</button></Link>
                         </div>
                     </div>
-                    <div className=''>
+                    <div className='' data-aos="fade-left"
+                        data-aos-anchor="#example-anchor"
+                        data-aos-offset="500"
+                        data-aos-duration="500" ss>
                         <img
                             src="https://i.ibb.co/MNPQ8KD/R-5.png"
                             alt="Illustration"

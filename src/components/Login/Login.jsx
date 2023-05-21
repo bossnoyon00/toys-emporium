@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FaGoogle, FaGithub } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from '../../providers/AuthProvider';
 import useTitle from '../../hooks/useTitle';
 
@@ -38,26 +38,17 @@ const Login = () => {
                 console.log(error);
             })
     }
-    const handleGithubSignIn = () => {
-        githubSignIn()
-            .then(result => {
-                const loggedUser = result.user;
-                console.log(loggedUser);
-            })
-            .catch(error => {
-                console.log(error);
-            })
-    }
+
     return (
-        <div>
-            <div className="hero min-h-screen bg-base-200">
+        <div className='border border-purple-500'>
+            <div className="hero min-h-screen p-6  bg-cyan-500">
                 <div className="hero-content flex-col ">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
+                    <div className="text-center text-orange-700 lg:text-left">
+                        <h1 className="text-5xl font-bold">Login Toy now!</h1>
 
                     </div>
                     <form onSubmit={handleSignIn} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <div className="card-body">
+                        <div className="card-body bg-amber-200 rounded">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -78,12 +69,10 @@ const Login = () => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
                             <div className='text-center'>
-                                <button onClick={handleGoogleSignIn} className='flex text-2xl w-full btn btn-accent flex-row items-center'><span className='mr-3'>Sign In</span><FaGoogle className=''></FaGoogle></button> <br />
-
-                                <button onClick={handleGithubSignIn} className='flex text-2xl w-full btn btn-accent flex-row items-center'><span className='mr-3'>Sign In</span><FaGithub></FaGithub></button>
+                                <button onClick={handleGoogleSignIn} className='flex text-2xl w-full btn btn-accent flex-row items-center'><span className='mr-3'>Sign In</span><FaGoogle className=''></FaGoogle></button><br />
                             </div>
                             <div>
-                                <p><small>New to chef house? <Link className='text-red-400 font-bold' to="/signup">Create New Account</Link></small></p>
+                                <p><small>New to Toys Emporium? <Link className='text- font-bold' to="/signup">Create New Account</Link></small></p>
                             </div>
                         </div>
 

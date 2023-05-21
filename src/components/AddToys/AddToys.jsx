@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useForm } from 'react-hook-form';
-import './AddToys.css'
 import useTitle from '../../hooks/useTitle';
 import Swal from 'sweetalert2';
 
@@ -20,6 +19,9 @@ const AddToys = () => {
         handleSubmit,
         formState: { errors },
     } = useForm();
+
+
+    //POST method function
     const onSubmit = (data) => {
 
         fetch("https://toy-emporium-server.vercel.app/post-toys", {
@@ -42,14 +44,14 @@ const AddToys = () => {
         console.log(data);
     };
     return (
-        <div className="add-job-container mt-52">
-            <div className="add-job row">
-                <div className="col-md-8">
-                    <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="border p-7 border-y-gray-400">
+            <div className="">
+                <div className="">
+                    <form className='space-y-5' onSubmit={handleSubmit(onSubmit)}>
                         {errors.exampleRequired && <span>This field is required</span>}
 
                         <input
-                            className="text-input"
+                            className="text-input border border-orange-300 rounded  p-5 w-full"
                             {...register("image")}
                             placeholder="image link"
                             type="url"
@@ -62,7 +64,7 @@ const AddToys = () => {
                             <label className="label">
                                 <span className="label-text">Sub Category</span>
                             </label>
-                            <select className="text-input  input input-bordered" {...register("subCategory")}>
+                            <select className="text-input  border border-orange-300 rounded  p-5 w-full input input-bordered" {...register("subCategory")}>
                                 <option value="Tarzen Car">Tarzen Car</option>
                                 <option value="Electric Car">Electric Car</option>
                                 <option value="Remote Car">Remote Control Car</option>
@@ -71,21 +73,21 @@ const AddToys = () => {
 
 
                         <input
-                            className="text-input"
+                            className="text-input border border-orange-300 rounded  p-5 w-full"
                             {...register("toyName")}
                             placeholder="Toy name"
                             required
                             type="name"
                         />
                         <input
-                            className="text-input"
+                            className="text-input border border-orange-300 rounded  p-5 w-full"
                             {...register("price")}
                             placeholder="Toy Price"
                             required
                             type="number"
                         />
                         <input
-                            className="text-input"
+                            className="text-input border border-orange-300 rounded  p-5 w-full"
                             value={user?.email}
                             {...register("postedBy")}
                             placeholder="Your email"
@@ -93,7 +95,7 @@ const AddToys = () => {
                             type="email"
                         />
                         <input
-                            className="text-input"
+                            className="text-input border border-orange-300 rounded  p-5 w-full"
                             value={user?.displayName}
                             {...register("userName")}
                             placeholder="Your name"
@@ -102,33 +104,26 @@ const AddToys = () => {
                         />
 
                         <input
-                            className="text-input"
+                            className="text-input border border-orange-300 rounded  p-5 w-full"
                             {...register("description")}
                             placeholder="description"
                         />
                         <input
-                            className="text-input"
+                            className="text-input border border-orange-300 rounded p-5 w-full"
                             {...register("quantity")}
                             required
                             placeholder="Available Quantity"
                         />
                         <input
-                            className="text-input"
+                            className="text-input border border-orange-300 rounded p-5 w-full"
                             {...register("ratings")}
                             placeholder="Ratings"
                             required
                         />
 
-                        <input className="submit-btn" value="Add Toys" type="submit" />
+                        <input className="btn btn-outline w-full btn-accent" value="Add Toys" type="submit" />
                     </form>
                 </div>
-                {/* <div className="col-md-4">
-                    <img
-                        className="w-100"
-                        src="https://i.ibb.co/rthZ75K/pngtree-job-vacancy-with-join-our-team-recruitment-vector-design-png-image-6419066-removebg-preview.png"
-                        alt=""
-                    />
-                </div> */}
             </div>
         </div>
     );

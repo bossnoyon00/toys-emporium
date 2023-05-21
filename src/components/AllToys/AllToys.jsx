@@ -1,10 +1,14 @@
 import { data } from 'autoprefixer';
 import React, { useEffect, useState } from 'react';
 import AllToy from './AllToy';
+import useTitle from '../../hooks/useTitle';
 
 const AllToys = () => {
+    useTitle('All Toys')
     const [toys, setToys] = useState([]);
     const [search, setSearch] = useState('');
+
+    //Show all toy
     useEffect(() => {
         fetch('https://toy-emporium-server.vercel.app/allToy')
             .then(res => res.json())
@@ -13,7 +17,7 @@ const AllToys = () => {
             })
     }, []);
 
-
+    //Search by name
     const handleSearchBtn = () => {
         fetch(`https://toy-emporium-server.vercel.app/searchByName/${search}`)
             .then(res => res.json())

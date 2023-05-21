@@ -34,7 +34,7 @@ const ShopByCategory = () => {
         <div>
             <h2>Shop by Category</h2>
             <Tabs>
-                <TabList>
+                <TabList className='grid md:grid-cols-3 gap-10' >
                     {
                         marvelCars.slice(0, 1).map((category, index) => (
                             <Tab className='btn btn-primary' key={index}>{category.subCategory}</Tab>
