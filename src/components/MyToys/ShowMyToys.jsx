@@ -28,7 +28,21 @@ const ShowMyToys = ({ myToy, index, handleDelete }) => {
                 </div>
             </td>
             <td>{toyName}</td>
-          
+            <td>
+                {userName}
+
+            </td>
+            <td>{postedBy}</td>
+            <td>{price}</td>
+            <td>{ratings}</td>
+            <td>{quantity}</td>
+            <th>
+                <Link to={`/updatedToys/${_id}`}> <button className="btn btn-ghost btn-xs">Update</button></Link>
+
+            </th>
+            <th>
+                <button onClick={() => handleDelete(_id)} className="btn btn-ghost btn-xs">Delete</button>
+            </th>
         </tr>
     );
 };
