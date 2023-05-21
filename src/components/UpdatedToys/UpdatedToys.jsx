@@ -49,39 +49,6 @@ const UpdatedToys = () => {
                     <form className='grid md:grid-cols-3' onSubmit={handleSubmit(onSubmit)}>
                         {errors.exampleRequired && <span>This field is required</span>}
 
-
-                        <input
-                            className="text-input"
-                            {...register("image")}
-                            placeholder="image link"
-                            type="url"
-                            defaultValue="https://i.ibb.co/MNPQ8KD/R-5.png"
-                        />
-
-                        <div className="form-control">
-
-                            <label className="label">
-                                <span className="label-text">Sub Category</span>
-                            </label>
-                            <select className="text-input  input input-bordered" {...register("subCategory")}>
-                                <option value="Tarzen Car">Tarzen Car</option>
-                                <option value="Electric Car">Electric Car</option>
-                                <option value="Remote Car">Remote Car</option>
-                            </select>
-                        </div>
-
-                        <input
-                            className="text-input"
-                            {...register("toyName")}
-                            placeholder="Toy name"
-                            type="name"
-                        />
-                        <input
-                            className="text-input"
-                            {...register("price")}
-                            placeholder="Toy Price"
-                            type="number"
-                        />
                         <input
                             className="text-input"
                             value={user?.email}
