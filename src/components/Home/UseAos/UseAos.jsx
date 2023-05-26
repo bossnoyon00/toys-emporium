@@ -8,7 +8,7 @@ const UseAos = () => {
         AOS.init({ duration: 1000 });
     }, []);
     return (
-        <section className="bg-gray-500  rounded my-24 py-8" data-aos="zoom-in-right">
+        <section data-aos="zoom-in" data-aos-duration="1000" className="bg-gray-500  rounded my-24 py-8">
             <div className="container mx-auto">
 
                 <div className='grid md:grid-cols-2 text-center'>
@@ -26,13 +26,11 @@ const UseAos = () => {
                     </div>
                     <div className=''>
                         <img
-                            data-aos-anchor="#example-anchor"
-                            data-aos-offset="500"
-                            data-aos-duration="1000" 
+                            data-aos="zoom-in"
+                            data-aos-duration="1000"
                             src="https://i.ibb.co/9G4BD8s/little-boy-riding-a-baby-car-free-vector.jpg"
                             alt="Illustration"
                             className="w-full rounded-lg"
-                            data-aos="zoom-in"
                         />
                     </div>
 
