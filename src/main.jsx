@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: '/singleToys/:id',
         element: <PrivateRoute><SingleToyDetails></SingleToyDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/singleToy/${params.id}`)
+        loader: ({ params }) => fetch(`https://toy-emporium-server.vercel.app/singleToy/${params.id}`)
       },
       {
         path: '/addToys',
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
       {
         path: '/updatedToys/:id',
         element: <PrivateRoute><UpdatedToys></UpdatedToys></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/post-toys/${params.id}`)
+        loader: ({ params }) => fetch(`https://toy-emporium-server.vercel.app/post-toys/${params.id}`)
       },
       {
         path: '/myToys',

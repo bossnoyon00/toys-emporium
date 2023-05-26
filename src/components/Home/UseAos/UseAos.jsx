@@ -24,15 +24,15 @@ const UseAos = () => {
                             <Link to='addToys'> <button className='btn btn-warning font-extrabold'>See All Toys</button></Link>
                         </div>
                     </div>
-                    <div className='' data-aos="fade-left"
-                        data-aos-anchor="#example-anchor"
-                        data-aos-offset="500"
-                        data-aos-duration="500" ss>
+                    <div className=''>
                         <img
-                            src="https://i.ibb.co/MNPQ8KD/R-5.png"
+                            data-aos-anchor="#example-anchor"
+                            data-aos-offset="500"
+                            data-aos-duration="1000" 
+                            src="https://i.ibb.co/9G4BD8s/little-boy-riding-a-baby-car-free-vector.jpg"
                             alt="Illustration"
                             className="w-full rounded-lg"
-                            data-aos="zoom-in" // Apply zoom-in animation on scroll
+                            data-aos="zoom-in"
                         />
                     </div>
 

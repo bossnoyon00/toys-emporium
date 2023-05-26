@@ -27,7 +27,7 @@ const NavBar = () => {
                     className='inline-flex items-center'
                 >
                     <div className='flex items-center justify-center '>
-                        <h1 className="text-2xl font-bold">Toy Shop</h1>
+                        <h1 className="text-2xl font-bold">Toy Car Emporium</h1>
                     </div>
 
                 </Link>
