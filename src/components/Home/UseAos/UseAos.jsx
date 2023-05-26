@@ -15,7 +15,7 @@ const UseAos = () => {
                     <div className='flex  flex-col justify-center text-left items-center mt-20'>
                         <h2 className="text-4xl font-bold text-success mb-4">  You Can now add <br /> your Toy. </h2>
                         <p className="text-zinc-200 text-1xl font-extrabold">
-                            We provide Best Toy And Fansy <br /> export Car. <br /><span className='text-'>
+                            We provide Best Toy And Fansy <br /> export Car. <br /><span className=''>
                                 The one Of most Popular Toy Shop.
                             </span>
                         </p>
@@ -28,7 +28,7 @@ const UseAos = () => {
                         <img
                             data-aos="zoom-in"
                             data-aos-duration="1000"
-                            src="https://i.ibb.co/9G4BD8s/little-boy-riding-a-baby-car-free-vector.jpg"
+                            src="https://i.ibb.co/cFx0K3R/R-1.png"
                             alt="Illustration"
                             className="w-full rounded-lg"
                         />
